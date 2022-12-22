@@ -1,0 +1,145 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;700&display=swap'); 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Nanum Pen Script', 'Noto Sans KR', sans-serif;
+}
+a{
+    color: red;
+}
+ul li{
+    list-style-type: none;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    width: 100%;
+    height: 667px;
+    position: relative;
+}
+.content1{
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* outline: 1px solid red; */
+}
+.content1 h1{
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.content1 p{
+    font-size: 24px;
+    color: #fff;
+    width: 20rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 24px;
+}
+.card{
+    width: 100%;
+    height: 667px;
+    background-color: #D5E4ED; 
+    background-image: url(/public/images/rabbit1.svg); 
+}
+#card .slide{
+    width: 333px;
+    height: 190px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.card h2{
+    font-size: 32px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.card p{
+    font: 16px 'Noto Sans KR';
+    text-align: center;
+    margin-top: 58px;
+}
+.card h3{
+    text-align: center;
+    font-size: 32px;
+    margin-top: 23px;
+}
+.label-hidden{
+    display: none;
+}
+.review .content2 h2{
+    font-size: 32px;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.rabbit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+#review-box{
+    /* outline: 1px solid red; */ 
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.review-box-sub{
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+}
+#review{
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 0 auto;
+}
+#id-name{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 15rem;
+    margin-right: 20px;
+}
+#btn-1{
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    
+}
+hr{
+    color: rgba(255, 255, 255, 0.8); 
+}
+#text-box{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.dbtn{
+    margin-bottom: 10px;
+}
+.text-box-name{
+    font-weight: bold;
+    font: 16px 'Noto Sans KR';
+}
+.text-box-desc{
+    font: 14px 'Noto Sans KR';
+    font-weight: 400;
+}
+.fa-trash-can{
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.493);
+    background-color: #fff;
+}
