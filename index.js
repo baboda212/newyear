@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const ejs = require('ejs');
 const fs = require('fs');
+const bodyparser = require('body-parser');
 
 let posts = []; //글(임시적으로 사용하는 변수) 데이터
 
@@ -34,7 +35,8 @@ app.post('/create', function(req, res){
     const value = req.body;
     value.name = req.body.name;
     value.desc = req.body.desc;
-
+    value.tdate = req.body.tdate;
+    
     //posts 배열 에 글 추가
     posts.push(value);
     //DB 파일에 글 저장
@@ -42,7 +44,7 @@ app.post('/create', function(req, res){
     //console.log(posts)
     //홈게시판으로이동(화면에 보이기)
     res.redirect('/');
-})
+});
 
 //delete 라우팅(글 삭제요청)
 app.post('/delete/:id', function(req, res){

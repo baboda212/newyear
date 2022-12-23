@@ -29,6 +29,7 @@
 </head>
 <body>
     <div class="container">
+        <!-- 타이틀 -->
         <div class="title">
             <video id="video" width="100%" height="auto" autoplay loop muted controls>
                 <source src="images/pexels-karolina-grabowska-5751106.mp4" type="video/mp4">
@@ -38,6 +39,7 @@
                 <p>희망찬 새해, 행운이 가득하시기 바랍니다.</p>
             </div>    
         </div>
+        <!-- 인사말 -->
         <div id="card" class="card">
             <h2 class="ani1">힘차게 도약하는 검은 토끼의 해,<br>
                 새해 복 많이 받으세요.</h2>
@@ -58,6 +60,7 @@
             </p>
             <h3 class="ani3">김선민 드림</h3>
         </div>
+        <!-- 게시판 -->
         <div class="review">
             <div class="content2">
                 <div class="rabbit">
@@ -72,6 +75,7 @@
                         <input type="text" name="name" placeholder="작성자명" id="id-name">
                         <button type="submit" id="btn-1">글쓰기</button>
                     </div>
+                    <input type="text" name="tdate" value="input_value" class="input_value">
                 </form>
             </div>
             <div class="content3">
@@ -83,8 +87,11 @@
                                     <%= posts[i].name  %>
                                 </div>
                                 <div class="text-box-date">
-                                    <p id=><span id="year"></span>/<span id="month"></span>/<span id="date"></span></p>
+                                    <%= posts[i].tdate  %> 
                                 </div>
+                                    
+                                </form>
+                                
                                 <div class="text-box-desc">
                                     <%= posts[i].desc  %>
                                 </div>
@@ -98,8 +105,7 @@
                     </ul>
                 <% } %>  
             </div>
-        </div>
-        
+        </div>    
     </div><!-- container -->
 
     <script src="js/img_gallery.js"></script>

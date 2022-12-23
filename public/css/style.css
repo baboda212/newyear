@@ -179,3 +179,7 @@ hr{
     color: rgba(0, 0, 0, 0.493);
     background-color: #fff;
 }
+.input_value{
+    border: none;
+    display: none;
+}

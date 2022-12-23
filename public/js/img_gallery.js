@@ -1,3 +1,4 @@
+/* 슬라이드 배너 */
 let num = 0;
 setInterval (function(){
     num++;
@@ -8,22 +9,46 @@ setInterval (function(){
     imgTag.setAttribute('src', `images/img${num}.jpg`);
 },5000);
 
-let yearEl = document.getElementById('year');//년
-let monthEl = document.getElementById('month');//월
-let dateEl = document.getElementById('date');//일
-//시간객체 생성
-let d = new Date();
-//년, 월, 일
-let year = d.getFullYear();
-let month = d.getMonth() + 1; //보정값 +1
-//console.log(month);
-let date = d.getDate();
-console.log(year,month,date);
-//년, 월,일 출력
-yearEl.textContent= year;
-monthEl.textContent= month;
-dateEl.textContent= date;
+/* 날짜 함수 */
+$(function(){
+    function nowDate(){
+        Number.prototype.pad = function (digits) {
+            for (var n = this.toString(); n.length < digits; n = 0 + n);
+            return n;
+          };
+          let now = new Date();
+          let yr = now.getFullYear();
+          let mo = now.getMonth();
+          let dnum = now.getDate();
+          let months = [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+          ];
+          let month = months[mo];
+          let dNum = dnum.pad(2);
+      
+          let dateValue = document.querySelector(".input_value");
+          dateValue.value = `${yr}.${month}.${dNum}`;
+      
+    }
+    
+    nowDate();
+});
 
+    
+
+
+/* 글자수 제한 */
 function len_chk(){  
     let frm = document.review_box.desc; 
       
