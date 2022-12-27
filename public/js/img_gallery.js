@@ -46,12 +46,9 @@ $(function(){
 });
 
     
-
-
 /* 글자수 제한 */
 function len_chk(){  
-    let frm = document.review_box.desc; 
-      
+    let frm = document.review_box.desc;
     if(frm.value.length > 510){  
          alert("글자수는 한글255자로 제한됩니다.!");  
          frm.value = frm.value.substring(0,510);  
@@ -59,3 +56,22 @@ function len_chk(){
     } 
   
   }; 
+  
+  function len_chn(){  
+    let frn = document.review_box.name;
+    if(frn.value.length > 16){  
+         alert("글자수는 한글8자로 제한됩니다.!");  
+         frm.value = frm.value.substring(0,16);  
+         frm.focus();  
+    } 
+  };
+  function len_chp(){  
+    let frn = document.review_box.pwd;
+    if(frn.value.length > 8){  
+         alert("글자수는 8자로 제한됩니다.!");  
+         frm.value = frm.value.substring(0,8);  
+         frm.focus();  
+    } 
+  };
+ 
+  

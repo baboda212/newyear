@@ -72,13 +72,15 @@
                     <label for="review" class="label-hidden">리뷰작성</label><br>
                     <textarea name="desc" id="review" cols="45%" rows="5" placeholder="여기에 글을 작성해 주세요" onkeyup="len_chk()"></textarea>
                     <div class="review-box-sub">
-                        <input type="text" name="name" placeholder="작성자명" id="id-name">
-                        <button type="submit" id="btn-1">글쓰기</button>
+                        <input type="text" name="name" placeholder="작성자명" id="id_name" onkeyup="len_chn()">
+                        <input type="text" name="pwd" placeholder="비밀번호" id="pwd" onkeyup="len_chp()">
                     </div>
+                    <button type="submit" id="btn-1">글쓰기</button>
                     <input type="text" name="tdate" value="input_value" class="input_value">
                 </form>
             </div>
             <div class="content3">
+                <p>댓글 <%= posts.length  %> </p>
                 <% for (let i = posts.length - 1; i >= 0; i--){ %>
                     <ul>
                         <li id="text-box">
