@@ -24,6 +24,7 @@ ul li{
     width: 100%;
     height: 667px;
     position: relative;
+    background-image: url(../images/title.jpg);
 }
 .content1{
     position: absolute;
